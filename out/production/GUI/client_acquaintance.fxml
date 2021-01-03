@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="battleship.ui.AcquaintanceController"
+            prefHeight="200.0" prefWidth="400.0">
+
+    <padding>
+        <Insets topRightBottomLeft="10" />
+    </padding>
+
+    <VBox AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <HBox spacing="20" VBox.vgrow="ALWAYS">
+            <VBox fx:id="hostParent" HBox.hgrow="ALWAYS">
+                <Text text="Server IP"/>
+                <TextField text="localhost" fx:id="hostUrlTextField" promptText="Enter host URL"/>
+            </VBox>
+            <VBox HBox.hgrow="ALWAYS">
+                <Text text="Server port"/>
+                <TextField text="8080" fx:id="portTextField" promptText="Enter port"/>
+            </VBox>
+        </HBox>
+        <Text text="Your nick" >
+            <VBox.margin>
+                <Insets top="40" />
+            </VBox.margin>
+        </Text>
+        <TextField fx:id="nickTextField" promptText="Enter your game nick"/>
+    </VBox>
+
+
+    <Button AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" fx:id="startGameButton" />
+</AnchorPane>

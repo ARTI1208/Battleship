@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import battleship.ui.controls.GameField?>
+<?import javafx.scene.control.Button?>
+<HBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      spacing="20"
+      fx:controller="battleship.ui.ShipPositioningController"
+      prefHeight="400.0" prefWidth="600.0">
+
+    <padding>
+        <Insets topRightBottomLeft="10" />
+    </padding>
+
+    <GameField mode="SETUP" fx:id="shipPositioningField"/>
+
+    <VBox spacing="10" fx:id="shipsHolder" >
+        <HBox spacing="10">
+            <Button text="Allocate" fx:id="allocateShipsButton" />
+            <Button text="Play" fx:id="playButton" />
+        </HBox>
+        <HBox spacing="10">
+            <Button text="Random" fx:id="allocateRandomlyButton" />
+            <Button text="Rotate" fx:id="rotateShipButton" />
+        </HBox>
+    </VBox>
+
+</HBox>

@@ -1,0 +1,63 @@
+.field-cell {
+  -fx-body-color: transparent;
+  -fx-background-color: -fx-body-color;
+  -fx-border-color: white;
+  -fx-background-radius: 0;
+  -fx-border-insets: 0;
+  -fx-border-image-insets: 0;
+  -fx-background-insets: 0;
+}
+
+.field-cell-no-hit {
+  -fx-body-color: white;
+  -fx-border-color: black;
+  -fx-border-radius: 5;
+  -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 0);
+}
+
+.field-cell:selected {
+  //-fx-background-color: -fx-body-color;
+  -fx-background-color: -fx-body-color;
+  -fx-border-color: blue;
+  -fx-border-radius: 5;
+  -fx-border-width: 2;
+}
+
+.field-cell-hit {
+  -fx-body-color: transparent;
+  -fx-background-color: -fx-body-color;
+
+}
+
+.field-cell-with-ship {
+  -fx-body-color: #6495ED;
+  -fx-background-color: -fx-body-color;
+}
+
+.field-cell-hit:selected {
+  -fx-body-color: transparent;
+  -fx-border-color: red;
+  -fx-border-radius: 5;
+  -fx-border-width: 2;
+}
+
+.text-area .scroll-bar:vertical {
+  -fx-max-width: 0;
+}
+
+.text-area {
+  -fx-border-width: 0;
+  -fx-background-insets: 0;
+  -fx-text-box-border: transparent;
+  -fx-background-color: transparent;
+}
+
+.text-area .content {
+  -fx-border-width: 0;
+  -fx-text-box-border: transparent;
+  -fx-background-color: transparent;
+}
+
+.statistics-area .content {
+  -fx-padding: 0;
+}

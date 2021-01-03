@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import battleship.ui.controls.ConsoleView?>
+<?import battleship.ui.controls.GameField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="battleship.ui.GameController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <ScrollPane AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0" fx:id="scrollPane" styleClass="edge-to-edge">
+        <VBox fx:id="container">
+            <HBox VBox.vgrow="ALWAYS" fx:id="fieldParent">
+                <VBox HBox.hgrow="ALWAYS">
+                    <Label textAlignment="CENTER" fx:id="playerName"/>
+                    <VBox>
+                        <GameField VBox.vgrow="ALWAYS" mode="MY_FIELD" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0" fx:id="myGameField"
+                                   HBox.hgrow="ALWAYS"/>
+                    </VBox>
+                </VBox>
+                <VBox HBox.hgrow="ALWAYS">
+                    <Text textAlignment="CENTER" fx:id="opponentName"/>
+                    <GameField mode="OPPONENT_FIELD" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0"
+                               fx:id="opponentGameField" HBox.hgrow="ALWAYS"/>
+                </VBox>
+            </HBox>
+        </VBox>
+    </ScrollPane>
+
+    <ConsoleView prefHeight="200" AnchorPane.rightAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.bottomAnchor="0"
+                 fx:id="consoleView"/>
+</AnchorPane>
